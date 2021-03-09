@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game mata Mosquito</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body onresize="HeigthAndWidth.widthAndHeigth()">
+    
+    <div class="panel">
+
+        <div class="lifes">
+            <img src="./img/coracao_cheio.png" id="1" alt="">
+            <img src="./img/coracao_cheio.png" id="2" alt="">
+            <img src="./img/coracao_cheio.png" id="3" alt="">
+        </div>
+
+        <div class="timing">
+
+            <span class="phase">Tempo restante: </span> <span class="time"></span> <br>
+            <span class="points">Sua Pontuação: <span class="nmr">0</span></span>
+
+        </div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+
+    <script>
+
+        cronometro.timing()
+
+        temporizer = setInterval(function() {
+
+            reset.removeAndLosePoints()
+            randomizePosition.position()
+            creatFlyBug.creatHtml()
+            reset.reset()
+            console.log(cronometro.spawn)
+        }, cronometro.spawn)
+    </script>
+
+</body>
+</html>
