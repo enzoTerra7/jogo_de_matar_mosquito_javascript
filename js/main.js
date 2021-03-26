@@ -128,7 +128,7 @@ function setTimeDificult(){
 
      var level = document.querySelector('#selectNvl').value
 
-     window.location.href = 'play.html?' + level
+     window.location.href = 'index.html?' + level
 
 }
 const cronometro = {
